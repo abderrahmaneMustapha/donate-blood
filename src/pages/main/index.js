@@ -13,8 +13,19 @@ import {
     Image,
     Grid,
     ResponsiveContext,
+    Layer,
+    Anchor,
+    Footer,
 } from "grommet";
-import { Next } from "grommet-icons";
+import {
+    Next,
+    Search,
+    Chat,
+    Help,
+    Twitter,
+    FacebookOption,
+    Instagram,
+} from "grommet-icons";
 
 import bgOne from "../../assets/images/bg-1.png";
 import bgTwo from "../../assets/images/bg-2.jpg";
@@ -69,7 +80,7 @@ const FirstHomeSection = () => (
             Header here
         </Heading>
         <Text margin={{ bottom: "3em", left: "1em" }} size="2.625em">
-            Comment pouvons-nous vous aider ?
+            Toute et tous Unis
         </Text>
         <Box
             fill="horizontal"
@@ -78,8 +89,14 @@ const FirstHomeSection = () => (
             background={{ color: "#fb6929", opacity: "strong" }}
             margin={{ top: "0.8em" }}
         >
-            <Text size="1.75em">NSCRIVEZ-VOUS À NOTRE NEWSLETTER</Text>
-            <Text size="1.1875em" margin={{ top: "0.2em", bottom: "2em" }}>
+            <Text size="1.75em" color="white">
+                NSCRIVEZ-VOUS À NOTRE NEWSLETTER
+            </Text>
+            <Text
+                size="1.1675em"
+                margin={{ top: "0.2em", bottom: "2em" }}
+                color="white"
+            >
                 <strong>
                     Chaque semaine, recevez l'actualité de la Ligue dans votre
                     boîte mail
@@ -159,7 +176,7 @@ const SecendHomeSection = () => {
                         gridArea="second"
                         direction="row"
                         gap="medium"
-                        pad={{ left: "2em", right: "2em" }}
+                        pad={{ left: "2em", right: "0.6em" }}
                     >
                         <Box width="12%" height="10%">
                             <Image src={twoHands} full />
@@ -187,19 +204,114 @@ const SecendHomeSection = () => {
         </Box>
     );
 };
+
+const HomeSideBar = () => {
+    return (
+        <Layer
+            full="vertical"
+            position="top-right"
+            margin={{ right: "80vw", left: "auto", top: "122%" }}
+            modal={false}
+            style={{ position: "absolute", minHeight: "120vh" }}
+            plain
+        >
+            <Box
+                margin={{ left: "2em", right: "2em" }}
+                pad={{ top: "2em", bottom: "2em" }}
+                background={{ color: "#4E79A2" }}
+                align="center"
+            >
+                <Text
+                    textAlign="center"
+                    size="1.75rem"
+                    width="medium"
+                    margin={{ bottom: "2em" }}
+                >
+                    Comment pouvons-nous <br></br> vous aider ?
+                </Text>
+
+                <Box margin={{ top: "1em", bottom: "5em" }}>
+                    <Button icon={<Search />} label="Chercher" />
+                </Box>
+
+                <hr width="80%"></hr>
+
+                <Text size={"1.75rem"} margin={{ top: "1em", bottom: "2em" }}>
+                    Vos outils
+                </Text>
+
+                <Box
+                    direction="row-responsive"
+                    justify="around"
+                    width="medium"
+                    margin={{ bottom: "6em" }}
+                >
+                    <Box direction="column">
+                        <Chat size="30em" />
+                        <Text>Forum</Text>
+                    </Box>
+
+                    <Box direction="column">
+                        <Help size="30em" />
+                        <Text>Help</Text>
+                    </Box>
+                </Box>
+            </Box>
+        </Layer>
+    );
+};
 const HomePage = () => {
     return (
         <MainSection>
+            <HomeSideBar />
             <FirstHomeSection />
             <SecendHomeSection />
         </MainSection>
     );
 };
+
+const Media = () => (
+    <Box direction="row" gap="xxsmall" justify="center">
+        <Anchor
+            a11yTitle="Share feedback on Github"
+            href="https://www.instagram.com/"
+            icon={<Instagram color="white" />}
+        />
+        <Anchor
+            a11yTitle="Chat with us on Slack"
+            href="https://www.facebook.com/"
+            icon={<FacebookOption color="white" />}
+        />
+        <Anchor
+            a11yTitle="Follow us on Twitter"
+            href="https://twitter.com/"
+            icon={<Twitter color="white" />}
+        />
+    </Box>
+);
+
+const WebFooter = () => (
+    <Box background="#3A4B69" direction="column" pad={{top:"2em", bottom:"1em"}}>
+      <Text size="0.8em" textAlign="center" ><strong>SUIVEZ-NOUS SUR LES RÉSEAUX SOCIAUX</strong></Text>
+    <Footer  pad="small">
+        <Box align="center" direction="row" gap="xsmall">
+            <Text alignSelf="center" color="white" size="small">
+                Website name
+            </Text>
+        </Box>
+        <Media />
+        <Text textAlign="center" size="xsmall">
+            ©Copyright
+        </Text>
+    </Footer>
+    </Box>
+);
 export const Main = () => {
     return (
         <>
             <TopNav />
             <HomePage />
+            <WebFooter />
         </>
     );
 };

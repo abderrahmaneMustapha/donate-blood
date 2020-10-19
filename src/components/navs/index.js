@@ -40,11 +40,12 @@ const DropContent = (props) => {
 
 const PhoneBox = () => (
     <Box direction="column">
-        <Box direction="row">
-            <Phone />
-            <Text>00 0000000</Text>
+        <Box direction="row" gap="small" >
+            <Phone color="#FB6929"  weight="bold" size="30em"/>
+            <Text  weight="bold"  color="#FB6929" size="1.5em">00 0000000</Text>
         </Box>
-        Écoute, aide, soutien
+        <Text textAlign="center" size="0.7em"> Écoute, aide, soutien</Text>
+       
     </Box>
 );
 
@@ -76,6 +77,7 @@ export const TopNav = () => {
     return (
         <Header
             background="white"
+            
             pad={{
                 left: "1.2em",
                 right: "1.2em",
@@ -119,12 +121,14 @@ export const TopNav = () => {
                     <Box direction="row" gap="large" width="70%">
                         <DropButton
                             plain
-                            label="Fancy Selector"
+                            label="JE TROUVE"
                             size="1.188rem"
                             onMouseEnter={() => {
                                 setOpenDropTrouve(true);
+                                setOpenDropSout(false);
+                                setOpenDropInfo(false);
                             }}
-                            onMouseLeave={() => {
+                            onClose={()=>{
                                 setOpenDropTrouve(false);
                             }}
                             margin={{ top: "1em" }}
@@ -135,11 +139,13 @@ export const TopNav = () => {
                         <DropButton
                             plain
                             size="1.188rem"
-                            label="Fancy Selector"
+                            label="JE SOUTIENS"
                             onMouseEnter={() => {
+                                setOpenDropTrouve(false);
                                 setOpenDropSout(true);
+                                setOpenDropInfo(false);
                             }}
-                            onMouseLeave={() => {
+                            onClose={()=>{
                                 setOpenDropSout(false);
                             }}
                             margin={{ top: "1em" }}
@@ -151,11 +157,13 @@ export const TopNav = () => {
                         <DropButton
                             plain
                             size="1.188rem"
-                            label="Fancy Selector"
+                            label="JE M'INFORME"
                             onMouseEnter={() => {
+                                setOpenDropTrouve(false);
+                                setOpenDropSout(false);
                                 setOpenDropInfo(true);
                             }}
-                            onMouseLeave={() => {
+                            onClose={()=>{
                                 setOpenDropInfo(false);
                             }}
                             margin={{ top: "1em" }}

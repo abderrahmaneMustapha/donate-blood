@@ -1,3 +1,9 @@
+
+@font-face {
+  font-family: 'Lobster';
+  src: local('Lobster'), url(./assets/font/Lobster-Regular.ttf) format('truetype');
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +16,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.article-sub-title{
+  font-family: 'Lobster', serif;
 }

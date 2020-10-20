@@ -195,7 +195,9 @@ export const TopNav = () => {
                     <PhoneBox />
                     <Avatar src="https://www.ligue-cancer.net/sites/all/themes/ligue/images/header/log-don-de-confiance.png" />
                     <Button
+                        icon={<FontAwesomeIcon icon={faHandHoldingHeart} />}
                         label={
+
                             <Text>
                                 <strong>Je Donne</strong>
                             </Text>
@@ -221,7 +223,11 @@ export const TopNav = () => {
                     <Box direction="row" gap="large" width="70%">
                         <DropButton
                             plain
-                            label="JE TROUVE"
+                            label={(
+                                <Text>
+                                    <strong>JE TROUVE</strong>
+                                </Text>
+                            )}
                             size="1.188rem"
                             onMouseEnter={() => {
                                 setOpenDropTrouve(true);
@@ -239,7 +245,11 @@ export const TopNav = () => {
                         <DropButton
                             plain
                             size="1.188rem"
-                            label="JE SOUTIENS"
+                            label={(
+                                <Text>
+                                    <strong>JE SOUTIEN</strong>
+                                </Text>
+                            )}
                             onMouseEnter={() => {
                                 setOpenDropTrouve(false);
                                 setOpenDropSout(true);
@@ -257,7 +267,11 @@ export const TopNav = () => {
                         <DropButton
                             plain
                             size="1.188rem"
-                            label="JE M'INFORME"
+                            label={(
+                                <Text>
+                                    <strong>JE M'INFORME</strong>
+                                </Text>
+                            )}
                             onMouseEnter={() => {
                                 setOpenDropTrouve(false);
                                 setOpenDropSout(false);
@@ -278,3 +292,4 @@ export const TopNav = () => {
         </Header>
     );
 };
+

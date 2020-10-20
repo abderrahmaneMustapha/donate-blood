@@ -55,8 +55,8 @@ const DropContent = (props) => {
     );
 };
 
-const PhoneBox = () => (
-    <Box direction="column">
+export const PhoneBox = () => (
+    <Box  align="center" justify="center" direction="column">
         <Box direction="row" gap="small">
             <Phone color="#FB6929" weight="bold" size="30em" />
             <Text weight="bold" color="#FB6929" size="1.5em">

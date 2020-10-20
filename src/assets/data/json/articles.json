@@ -3,6 +3,14 @@
         "slug": "27991_avec-vous-chaque-etape-de-la-maladie",
         "title": "LE SOUTIEN PSYCHOLOGIQUE ET L’ÉCOUTE",
         "overview": "Avec vous, à chaque étape de la maladie",
-        "icon": ["fas", "fa-assistive-listening-systems"]
+        "color" : "#02B39B",
+        "icon": "fas fa-assistive-listening-systems"
+    },
+    {
+        "slug": "26025_devenir-partenaire-de-la-ligue",
+        "title": "DEVENIR UNE ENTREPRISE PARTENAIRE",
+        "overview": "Devenir partenaire de la Ligue",
+        "color" : "#418FDC",
+        "icon": "fas fa-assistive-listening-systems"
     }]
 }

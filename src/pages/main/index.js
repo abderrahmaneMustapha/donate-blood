@@ -22,7 +22,7 @@ import {
     Chat,
     Help,
 } from "grommet-icons";
-
+import {useHistory} from "react-router-dom"
 import bgOne from "../../assets/images/bg-1.png";
 import bgTwo from "../../assets/images/bg-2.jpg";
 import ALgeriaPhoto from "../../assets/images/algeria.png";
@@ -202,6 +202,7 @@ const SecendHomeSection = () => {
 };
 
 const HomeSideBar = () => {
+    let history = useHistory()
     return (
         <Layer
             full="vertical"
@@ -227,7 +228,9 @@ const HomeSideBar = () => {
                 </Text>
 
                 <Box margin={{ top: "1em", bottom: "5em" }}>
-                    <Button icon={<Search />} label="Chercher" />
+                    <Button icon={<Search />} label="Chercher" onClick={()=>{
+                        history.push("/chercher")
+                    }} />
                 </Box>
 
                 <hr width="80%"></hr>

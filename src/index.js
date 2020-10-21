@@ -4,8 +4,9 @@ import "./index.css";
 import { Main } from "./pages/main/index";
 import Article from "./pages/articles/index";
 import Temoignages , {OneTemoignagesPage}from "./pages/temoignages/index";
-import {Connect} from "./pages/forms/index"
-import  Search from "./pages/search/index"
+import {Connect, Donne} from "./pages/forms/index"
+import Search from "./pages/search/index"
+
 import * as serviceWorker from "./serviceWorker";
 import { Grommet } from "grommet";
 import { grommet } from "grommet/themes";
@@ -18,9 +19,10 @@ ReactDOM.render(
                 <Route exact path="/" component={Main} />
                 <Route exact path="/articles/:slug" component={Article} />
                 <Route exact path="/temoignages" component={Temoignages} />
-                <Route exact path="/hopitaux" component={ Search } />
+                <Route exact path="/chercher" component={ Search } />
                 <Route exact path="/temoignages/:id" component={OneTemoignagesPage} />
                 <Route exact path="/connect" component={Connect} />
+                <Route exact path="/faire-un-don" component={Donne} />
             </Router>
         </Grommet>
     </React.StrictMode>,

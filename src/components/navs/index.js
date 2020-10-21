@@ -17,6 +17,7 @@ import {
     Instagram,
     Twitter,
 } from "grommet-icons";
+import logo from "../../assets/../logo.jpg"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -34,8 +35,7 @@ import {
 
 import {useHistory} from "react-router-dom"
 
-const gravatarLink =
-    "//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80";
+const gravatarLink = logo
 
 const DropContent = (props) => {
     return (

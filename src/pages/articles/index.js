@@ -1,12 +1,12 @@
 import React from "react";
 import { TopNav } from "../../components/navs/index";
 import { WebFooter } from "../../components/footer/index";
-import { Main, Box, Markdown, Heading, Text } from "grommet";
+import { Main, Box, Markdown, Heading, Text, List } from "grommet";
 import { useParams } from "react-router-dom";
 import articles from "../../assets/data/json/articles.json";
 import { getArticlesBySlug } from "../../hooks/index";
 import { PhoneBox } from "../../components/navs/index";
-
+import {useHistory} from "react-router-dom"
 function ArticleTextMd(props) {
     let [data, setdata] = React.useState("");
     props.text.then((data) => {
@@ -17,9 +17,21 @@ function ArticleTextMd(props) {
 }
 function MainArticle(props) {
     const article = props.article;
-
+    const url_slug = props.url_slug;
+    let history= useHistory()
+    const [selected, setSelected] = React.useState(
+        props.article.result.serie.findIndex(
+            (element) => element.slug === url_slug
+        )
+    );
     return (
-        <Box direction="row" pad="small"   margin={{top:"2rem" }}  gap="medium" fill="horizontal">
+        <Box
+            direction="row"
+            pad="small"
+            margin={{ top: "2rem" }}
+            gap="medium"
+            fill="horizontal"
+        >
             <Box width="70%" pad="large" background="white">
                 <Box
                     fill="horizontal"
@@ -63,12 +75,44 @@ function MainArticle(props) {
                 background="#E6E6E6"
                 direction="column"
             >
+                {article.result.serie ? (
+                    <Box pad="small" background="white" margin={{ top: "0" }}>
+                        <List
+                            width="100%"
+                            primaryKey="overview"
+                            data={article.result.serie}
+                            itemProps={
+                                selected >= 0
+                                    ? {
+                                          [selected]: {
+                                              background: `${article.result.color}`,
+                                          },
+                                      }
+                                    : undefined
+                            }
+                            onClickItem={(event) =>{
+                                history.push(`/articles/${event.item.slug}`)
+                                setSelected(
+                                    selected === event.index
+                                        ? undefined
+                                        : event.index
+                                )
+                            }
+                               
+                            }
+                        />
+                    </Box>
+                ) : undefined}
                 <Box pad="small" background="white" margin={{ top: "0" }}>
-                    <Text textAlign="center" size="medium" margin={{top:"1em", bottom:"1em"}}>
+                    <Text
+                        textAlign="center"
+                        size="medium"
+                        margin={{ top: "1em", bottom: "1em" }}
+                    >
                         {" "}
                         Pour tout renseignement, appelez le{" "}
                     </Text>
-                    <PhoneBox  />
+                    <PhoneBox />
                 </Box>
             </Box>
         </Box>
@@ -80,9 +124,9 @@ export default function Article() {
     const article = getArticlesBySlug(articles, slug);
     console.log(article);
     return (
-        <Main fill="horizontal"  background={{ color: "#E6E6E6" }}>
+        <Main fill="horizontal" background={{ color: "#E6E6E6" }}>
             <TopNav />
-            <MainArticle article={article} />
+            <MainArticle url_slug={slug} article={article} />
             <WebFooter />
         </Main>
     );

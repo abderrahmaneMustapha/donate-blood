@@ -1,16 +1,73 @@
 {
     "articles": [{
-        "slug": "27991_avec-vous-chaque-etape-de-la-maladie",
-        "title": "LE SOUTIEN PSYCHOLOGIQUE ET L’ÉCOUTE",
-        "overview": "Avec vous, à chaque étape de la maladie",
-        "color" : "#02B39B",
-        "icon": "fas fa-assistive-listening-systems"
-    },
-    {
-        "slug": "26025_devenir-partenaire-de-la-ligue",
-        "title": "DEVENIR UNE ENTREPRISE PARTENAIRE",
-        "overview": "Devenir partenaire de la Ligue",
-        "color" : "#418FDC",
-        "icon": "fas fa-handshake"
-    }]
+            "slug": "27991_avec-vous-chaque-etape-de-la-maladie",
+            "title": "LE SOUTIEN PSYCHOLOGIQUE ET L’ÉCOUTE",
+            "overview": "Avec vous, à chaque étape de la maladie",
+            "color": "#02B39B",
+            "icon": "fas fa-assistive-listening-systems"
+        },
+        {
+            "slug": "26025_devenir-partenaire-de-la-ligue",
+            "title": "DEVENIR UNE ENTREPRISE PARTENAIRE",
+            "overview": "Devenir partenaire de la Ligue",
+            "color": "#418FDC",
+            "icon": "fas fa-handshake"
+        },
+        {
+            "slug": "25168_le-cancer-en-france",
+            "title": "LE CANCER, DÉFINITION ET CHIFFRES",
+            "overview": "Le cancer en France",
+            "color": "#F74D6D",
+            "icon": "fas fa-search",
+            "serie": [{
+                "slug": "25168_le-cancer-en-france",
+                "overview": "Le cancer en France"
+            }, {
+                "slug": "26088_quest-ce-que-le-cancer",
+                "overview": "Qu'est-ce que le cancer ?"
+            }, {
+                "slug": "26089_les-chiffres-cles-des-cancers",
+                "overview": "Les chiffres clés des cancers"
+            }]
+        },
+        {
+
+            "slug": "26088_quest-ce-que-le-cancer",
+            "title": "LE CANCER, DÉFINITION ET CHIFFRES",
+            "overview": "Qu'est-ce que le cancer ?",
+            "color": "#F74D6D",
+            "icon": "fas fa-search",
+            "serie": [{
+                "slug": "25168_le-cancer-en-france",
+                "overview": "Le cancer en France"
+            }, {
+                "slug": "26088_quest-ce-que-le-cancer",
+                "overview": "Qu'est-ce que le cancer ?"
+            }, {
+                "slug": "26089_les-chiffres-cles-des-cancers",
+                "overview": "Les chiffres clés des cancers"
+            }]
+
+        },
+
+        {
+
+            "slug": "26089_les-chiffres-cles-des-cancers",
+            "title": "LE CANCER, DÉFINITION ET CHIFFRES",
+            "overview": "Les chiffres clés des cancers",
+            "color": "#F74D6D",
+            "icon": "fas fa-search",
+            "serie": [{
+                "slug": "25168_le-cancer-en-france",
+                "overview": "Le cancer en France"
+            }, {
+                "slug": "26088_quest-ce-que-le-cancer",
+                "overview": "Qu'est-ce que le cancer ?"
+            }, {
+                "slug": "26089_les-chiffres-cles-des-cancers",
+                "overview": "Les chiffres clés des cancers"
+            }]
+
+        }
+    ]
 }

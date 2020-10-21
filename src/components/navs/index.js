@@ -136,7 +136,7 @@ const informe_items = [
         text="Le cancer, définition et chiffres"
         icon={faSearch}
         color="#F9496B"
-        link="/faire-un-don"
+        link="/articles/25168_le-cancer-en-france"
     />,
     <IconsBox
         text="Traitement et conseil"

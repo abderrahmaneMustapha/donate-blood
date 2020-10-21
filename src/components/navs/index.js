@@ -17,7 +17,7 @@ import {
     Instagram,
     Twitter,
 } from "grommet-icons";
-import logo from "../../assets/../logo.jpg"
+import logo from "../../assets/../logo.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -33,9 +33,9 @@ import {
     faHospital,
 } from "@fortawesome/free-solid-svg-icons";
 
-import {useHistory} from "react-router-dom"
+import { useHistory } from "react-router-dom";
 
-const gravatarLink = logo
+const gravatarLink = logo;
 
 const DropContent = (props) => {
     return (
@@ -57,7 +57,7 @@ const DropContent = (props) => {
 };
 
 export const PhoneBox = () => (
-    <Box  align="center" justify="center" direction="column">
+    <Box align="center" justify="center" direction="column">
         <Box direction="row" gap="small">
             <Phone color="#FB6929" weight="bold" size="30em" />
             <Text weight="bold" color="#FB6929" size="1.5em">
@@ -95,7 +95,13 @@ const SocialList = () => {
 const IconsBox = (props) => {
     return (
         <Anchor color="#575757" href={props.link}>
-            <Box direction="column" gap="small" width="small" margin={{bottom:"2em"}} align="center">
+            <Box
+                direction="column"
+                gap="small"
+                width="small"
+                margin={{ bottom: "2em" }}
+                align="center"
+            >
                 <FontAwesomeIcon
                     color={props.color}
                     icon={props.icon}
@@ -171,20 +177,19 @@ const informe_items = [
         color="#F9496B"
         link="/temoignages"
     />,
-    
+
     <IconsBox
         text="Les hopitaux"
         icon={faHospital}
         color="#F9496B"
         link="/articles/hopitaux"
-    />
-   
+    />,
 ];
 export const TopNav = () => {
     const [opendropTrouve, setOpenDropTrouve] = useState(false);
     const [opendropSout, setOpenDropSout] = useState(false);
     const [opendropInfo, setOpenDropInfo] = useState(false);
-    let history = useHistory()
+    let history = useHistory();
     return (
         <Header
             background="white"
@@ -207,7 +212,6 @@ export const TopNav = () => {
                     <Button
                         icon={<FontAwesomeIcon icon={faHandHoldingHeart} />}
                         label={
-
                             <Text>
                                 <strong>Je Donne</strong>
                             </Text>
@@ -215,9 +219,9 @@ export const TopNav = () => {
                     />
 
                     <Button
-                    onClick={()=>{
-                        history.push("/connect")
-                    }}
+                        onClick={() => {
+                            history.push("/connect");
+                        }}
                         label={
                             <Text>
                                 <strong>Se Connecter</strong>
@@ -236,11 +240,11 @@ export const TopNav = () => {
                     <Box direction="row" gap="large" width="70%">
                         <DropButton
                             plain
-                            label={(
+                            label={
                                 <Text>
                                     <strong>JE TROUVE</strong>
                                 </Text>
-                            )}
+                            }
                             size="1.188rem"
                             onMouseEnter={() => {
                                 setOpenDropTrouve(true);
@@ -258,11 +262,11 @@ export const TopNav = () => {
                         <DropButton
                             plain
                             size="1.188rem"
-                            label={(
+                            label={
                                 <Text>
                                     <strong>JE SOUTIEN</strong>
                                 </Text>
-                            )}
+                            }
                             onMouseEnter={() => {
                                 setOpenDropTrouve(false);
                                 setOpenDropSout(true);
@@ -280,11 +284,11 @@ export const TopNav = () => {
                         <DropButton
                             plain
                             size="1.188rem"
-                            label={(
+                            label={
                                 <Text>
                                     <strong>JE M'INFORME</strong>
                                 </Text>
-                            )}
+                            }
                             onMouseEnter={() => {
                                 setOpenDropTrouve(false);
                                 setOpenDropSout(false);
@@ -305,4 +309,3 @@ export const TopNav = () => {
         </Header>
     );
 };
-

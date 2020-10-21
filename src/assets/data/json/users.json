@@ -1,0 +1,8 @@
+{
+    "users" : [
+        {"nom":"sssa", "prenom": "azeazeaze", "group": "O", "wilaya": "tiaret", "maladie": "something"},
+        {"nom":"almms", "prenom": "azeazqsdaze", "group": "O+", "wilaya": "oran", "maladie": "anotherthing"},
+        {"nom":"aqsdqsd", "prenom": "qwwzeaze", "group": "A", "wilaya": "alger", "maladie": "sick"},
+        {"nom":"qsdqs", "prenom": "yyyyy", "group": "B", "wilaya": "setif", "maladie":"Hello"}
+    ]
+}

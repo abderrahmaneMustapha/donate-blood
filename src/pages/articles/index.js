@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import { TopNav } from "../../components/navs/index";
 import { WebFooter } from "../../components/footer/index";
-import { Main, Box, Markdown, Heading, Text, List } from "grommet";
+import {
+    Main,
+    Box,
+    Markdown,
+    Heading,
+    Text,
+    List,
+    ResponsiveContext,
+    Grid,
+    Card,
+    Image,
+} from "grommet";
 import { useParams } from "react-router-dom";
 import articles from "../../assets/data/json/articles.json";
 import { getArticlesBySlug } from "../../hooks/index";
 import { PhoneBox } from "../../components/navs/index";
-import {useHistory} from "react-router-dom"
+import { useHistory } from "react-router-dom";
 function ArticleTextMd(props) {
     let [data, setdata] = React.useState("");
     props.text.then((data) => {
@@ -18,12 +29,17 @@ function ArticleTextMd(props) {
 function MainArticle(props) {
     const article = props.article;
     const url_slug = props.url_slug;
-    let history= useHistory()
+    const size = useContext(ResponsiveContext);
+    let history = useHistory();
+
     const [selected, setSelected] = React.useState(
-        props.article.result.serie.findIndex(
-            (element) => element.slug === url_slug
-        )
+        props.article.result.serie
+            ? props.article.result.serie.findIndex(
+                  (element) => element.slug === url_slug
+              )
+            : 0
     );
+
     return (
         <Box
             direction="row"
@@ -65,7 +81,40 @@ function MainArticle(props) {
                 </Box>
 
                 <hr width="80%"></hr>
-                <ArticleTextMd text={article.text} />
+                {article.text ? (
+                    <ArticleTextMd text={article.text} />
+                ) : (
+                    <Box margin={{ top: "2em" }}>
+                        <Grid
+                            columns={size !== "small" ? "small" : "100%"}
+                            gap="small"
+                        >
+                            {article.result.list.map((article, index) => (
+                                <Card
+                                    direction="column"
+                                    justify="center"
+                                    pad={{ top: "0", left: "0", right: "0" }}
+                                    key={index}
+                                    onClick={()=>{
+                                        history.push(`/articles/${article.slug}`)
+                                    }}
+                                >
+                                    <Image
+                                        fit="contain"
+                                        fill
+                                        src={article.image}
+                                    />
+                                    <Text
+                                        textAlign="center"
+                                        margin={{ vertical: "1em" }}
+                                    >
+                                        {article.title}
+                                    </Text>
+                                </Card>
+                            ))}
+                        </Grid>
+                    </Box>
+                )}
             </Box>
 
             <Box
@@ -90,16 +139,14 @@ function MainArticle(props) {
                                       }
                                     : undefined
                             }
-                            onClickItem={(event) =>{
-                                history.push(`/articles/${event.item.slug}`)
+                            onClickItem={(event) => {
+                                history.push(`/articles/${event.item.slug}`);
                                 setSelected(
                                     selected === event.index
                                         ? undefined
                                         : event.index
-                                )
-                            }
-                               
-                            }
+                                );
+                            }}
                         />
                     </Box>
                 ) : undefined}

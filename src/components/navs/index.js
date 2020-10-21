@@ -142,13 +142,13 @@ const informe_items = [
         text="Traitement et conseil"
         icon={faPills}
         color="#F9496B"
-        link="/articles/26025_devenir-partenaire-de-la-ligue"
+        link="/articles/26109_quelques-conseils-pour-pallier-les-effets-secondaires-du-traitement-du-cancer"
     />,
     <IconsBox
         text="Tous les cancers"
         icon={faProjectDiagram}
         color="#F9496B"
-        link="/articles/26025_devenir-partenaire-de-la-ligue"
+        link="/articles/26123_liste-des-types-de-cancers"
     />,
     <IconsBox
         text="Prévention et dépistage"

@@ -68,6 +68,285 @@
                 "overview": "Les chiffres clés des cancers"
             }]
 
+        },
+
+        {
+            "slug": "26109_quelques-conseils-pour-pallier-les-effets-secondaires-du-traitement-du-cancer",
+            "title": "TRAITEMENT ET CONSEIL",
+            "overview": "Quelques conseils pour pallier les effets secondaires du traitement du cancer",
+            "color": "#F74D6D",
+            "icon": "fas fa-pills",
+            "serie": [{
+                "slug": "26109_quelques-conseils-pour-pallier-les-effets-secondaires-du-traitement-du-cancer",
+                "overview": "Quelques conseils pour pallier les effets secondaires du traitement du cancer"
+            }, {
+                "slug": "26110_la-chimiotherapie",
+                "overview": "La chimiothérapie"
+            }, {
+                "slug": "26111_la-radiotherapie",
+                "overview": "La radiothérapie"
+            }, {
+                "slug": "26112_lhormonotherapie",
+                "overview": "L'hormonothérapie"
+            }]
+
+        },
+
+        {
+            "slug": "26110_la-chimiotherapie",
+            "title": "TRAITEMENT ET CONSEIL",
+            "overview": "La chimiothérapie",
+            "color": "#F74D6D",
+            "icon": "fas fa-pills",
+            "serie": [{
+                "slug": "26109_quelques-conseils-pour-pallier-les-effets-secondaires-du-traitement-du-cancer",
+                "overview": "Quelques conseils pour pallier les effets secondaires du traitement du cancer"
+            }, {
+                "slug": "26110_la-chimiotherapie",
+                "overview": "La chimiothérapie"
+            }, {
+                "slug": "26111_la-radiotherapie",
+                "overview": "La radiothérapie"
+            }, {
+                "slug": "26112_lhormonotherapie",
+                "overview": "L'hormonothérapie"
+            }]
+
+        },
+
+        {
+            "slug": "26111_la-radiotherapie",
+            "title": "TRAITEMENT ET CONSEIL",
+            "overview": "La radiothérapie",
+            "color": "#F74D6D",
+            "icon": "fas fa-pills",
+            "serie": [{
+                "slug": "26109_quelques-conseils-pour-pallier-les-effets-secondaires-du-traitement-du-cancer",
+                "overview": "Quelques conseils pour pallier les effets secondaires du traitement du cancer"
+            }, {
+                "slug": "26110_la-chimiotherapie",
+                "overview": "La chimiothérapie"
+            }, {
+                "slug": "26111_la-radiotherapie",
+                "overview": "La radiothérapie"
+            }, {
+                "slug": "26112_lhormonotherapie",
+                "overview": "L'hormonothérapie"
+            }]
+
+        },
+
+        {
+            "slug": "26112_lhormonotherapie",
+            "title": "TRAITEMENT ET CONSEIL",
+            "overview": "L'hormonothérapie",
+            "color": "#F74D6D",
+            "icon": "fas fa-pills",
+            "serie": [{
+                "slug": "26109_quelques-conseils-pour-pallier-les-effets-secondaires-du-traitement-du-cancer",
+                "overview": "Quelques conseils pour pallier les effets secondaires du traitement du cancer"
+            }, {
+                "slug": "26110_la-chimiotherapie",
+                "overview": "La chimiothérapie"
+            }, {
+                "slug": "26111_la-radiotherapie",
+                "overview": "La radiothérapie"
+            }, {
+                "slug": "26112_lhormonotherapie",
+                "overview": "L'hormonothérapie"
+            }]
+
+        },
+        {
+            "slug": "26123_liste-des-types-de-cancers",
+            "title": "TOUS LES CANCERS",
+            "overview": "Liste des types de cancers",
+            "color": "#F74D6D",
+            "icon": "fas fa-pills",
+            "list": [{
+                    "title": "Cancer du poumon",
+                    "image": "https://www.ligue-cancer.net/sites/default/files/anatomie-poumon_0.jpg",
+                    "slug": "54_cancer-du-poumon"
+                },
+                {
+                    "title": "Cancer du sein",
+                    "image": "https://www.ligue-cancer.net/sites/default/files/anatomie-sein.jpg",
+                    "slug": "26094_cancer-du-sein"
+                },
+                {
+                    "title": "Cancer de la prostate",
+                    "image": "https://www.ligue-cancer.net/sites/default/files/anatomie-prostate.jpg",
+                    "slug": "26095_cancer-de-la-prostate"
+                },
+                {
+                    "title": "Cancer du côlon et du rectum",
+                    "image": "https://www.ligue-cancer.net/sites/default/files/anatomie-colon-rectum_0.jpg",
+                    "slug": "26096_cancer-du-colon-et-du-rectum"
+                }
+            ],
+            "serie": [{
+                    "overview": "Liste des types de cancers",
+                    "slug": "26123_liste-des-types-de-cancers"
+                }, {
+                    "overview": "Cancer du poumon",
+                    "slug": "54_cancer-du-poumon"
+                },
+                {
+                    "overview": "Cancer du sein",
+                    "slug": "26094_cancer-du-sein"
+                },
+                {
+                    "overview": "Cancer de la prostate",
+                    "slug": "26095_cancer-de-la-prostate"
+                },
+                {
+                    "overview": "Cancer du côlon et du rectum",
+                    "slug": "26096_cancer-du-colon-et-du-rectum"
+                }
+            ]
+
+        },
+
+        {
+            "slug": "54_cancer-du-poumon",
+            "title": "TOUS LES CANCERS",
+            "overview": "Cancer du poumon",
+            "color": "#F74D6D",
+            "icon": "fas fa-pills",
+            "serie": [{
+                    "overview": "Liste des types de cancers",
+                    "slug": "26123_liste-des-types-de-cancers"
+                }, {
+                    "overview": "Cancer du poumon",
+                    "slug": "54_cancer-du-poumon"
+                },
+                {
+                    "overview": "Cancer du sein",
+                    "slug": "26094_cancer-du-sein"
+                },
+                {
+                    "overview": "Cancer de la prostate",
+                    "slug": "26095_cancer-de-la-prostate"
+                },
+                {
+                    "overview": "Cancer du côlon et du rectum",
+                    "slug": "26096_cancer-du-colon-et-du-rectum"
+                }
+            ]
+
+        },
+        {
+            "slug": "26094_cancer-du-sein",
+            "title": "TOUS LES CANCERS",
+            "overview": "Cancer du sein",
+            "color": "#F74D6D",
+            "icon": "fas fa-pills",
+            "serie": [{
+                    "overview": "Liste des types de cancers",
+                    "slug": "26123_liste-des-types-de-cancers"
+                }, {
+                    "overview": "Cancer du poumon",
+                    "slug": "54_cancer-du-poumon"
+                },
+                {
+                    "overview": "Cancer du sein",
+                    "slug": "26094_cancer-du-sein"
+                },
+                {
+                    "overview": "Cancer de la prostate",
+                    "slug": "26095_cancer-de-la-prostate"
+                },
+                {
+                    "overview": "Cancer du côlon et du rectum",
+                    "slug": "26096_cancer-du-colon-et-du-rectum"
+                }
+            ]
+
+        },
+        {
+            "slug": "26095_cancer-de-la-prostate",
+            "title": "TOUS LES CANCERS",
+            "overview": "Cancer de la prostate",
+            "color": "#F74D6D",
+            "icon": "fas fa-pills",
+            "serie": [{
+                    "overview": "Liste des types de cancers",
+                    "slug": "26123_liste-des-types-de-cancers"
+                }, {
+                    "overview": "Cancer du poumon",
+                    "slug": "54_cancer-du-poumon"
+                },
+                {
+                    "overview": "Cancer du sein",
+                    "slug": "26094_cancer-du-sein"
+                },
+                {
+                    "overview": "Cancer de la prostate",
+                    "slug": "26095_cancer-de-la-prostate"
+                },
+                {
+                    "overview": "Cancer du côlon et du rectum",
+                    "slug": "26096_cancer-du-colon-et-du-rectum"
+                }
+            ]
+
+        },
+        {
+            "slug": "26096_cancer-du-colon-et-du-rectum",
+            "title": "TOUS LES CANCERS",
+            "overview": "Cancer du côlon et du rectum",
+            "color": "#F74D6D",
+            "icon": "fas fa-pills",
+            "serie": [{
+                    "overview": "Liste des types de cancers",
+                    "slug": "26123_liste-des-types-de-cancers"
+                }, {
+                    "overview": "Cancer du poumon",
+                    "slug": "54_cancer-du-poumon"
+                },
+                {
+                    "overview": "Cancer du sein",
+                    "slug": "26094_cancer-du-sein"
+                },
+                {
+                    "overview": "Cancer de la prostate",
+                    "slug": "26095_cancer-de-la-prostate"
+                },
+                {
+                    "overview": "Cancer du côlon et du rectum",
+                    "slug": "26096_cancer-du-colon-et-du-rectum"
+                }
+            ]
+
+        },
+        {
+            "slug": "25638_la-prevention-des-cancers",
+            "title": "TOUS LES CANCERS",
+            "overview": "Cancer du côlon et du rectum",
+            "color": "#F74D6D",
+            "icon": "fas fa-pills",
+            "serie": [{
+                    "overview": "Liste des types de cancers",
+                    "slug": "26123_liste-des-types-de-cancers"
+                }, {
+                    "overview": "Cancer du poumon",
+                    "slug": "54_cancer-du-poumon"
+                },
+                {
+                    "overview": "Cancer du sein",
+                    "slug": "26094_cancer-du-sein"
+                },
+                {
+                    "overview": "Cancer de la prostate",
+                    "slug": "26095_cancer-de-la-prostate"
+                },
+                {
+                    "overview": "Cancer du côlon et du rectum",
+                    "slug": "26096_cancer-du-colon-et-du-rectum"
+                }
+            ]
+
         }
+
     ]
 }

@@ -1,0 +1,5 @@
+Dans la majorité des cas, une évolution lente n'a que peu d'incidences sur la vie de l'homme concerné. Toutefois, certaines formes de cancer de la prostate ou certains traitements peuvent avoir un impact majeur sur la vie des hommes malheureusement touchés par ces formes les plus graves. C'est en tenant compte de tous les paramètres prédictifs, pronostics, cliniques ou évolutifs qu'il convient d'envisager la prise en charge la mieux adaptée.
+
+Les informations proposées dans ce module décrivent les situations et les techniques les plus couramment rencontrées mais n'ont pas valeur d'avis médical. Ces informations sont destinées à faciliter vos échanges avec les différents soignants. Ce sont vos interlocuteurs privilégiés ; n'hésitez pas à leur poser des questions. 
+
+La prostate est la glande sexuelle masculine située entre la vessie en haut, le rectum en arrière, enserrant l'urètre qui conduit l'urine de la vessie au méat, en forme de marron à pointe dirigée vers le bas. Son rôle est de produire une petite partie des sécrétions qui, avec les spermatozoïdes, constituent le sperme

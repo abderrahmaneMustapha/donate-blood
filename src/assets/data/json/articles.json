@@ -339,7 +339,7 @@
                 {
                     "overview": "Alcool et cancer",
                     "slug": "25941_alcool-et-cancer"
-                }                
+                }
             ]
 
         },
@@ -363,7 +363,7 @@
                 {
                     "overview": "Alcool et cancer",
                     "slug": "25941_alcool-et-cancer"
-                }                
+                }
             ]
 
         },
@@ -387,7 +387,7 @@
                 {
                     "overview": "Alcool et cancer",
                     "slug": "25941_alcool-et-cancer"
-                }                
+                }
             ]
 
         },
@@ -411,7 +411,7 @@
                 {
                     "overview": "Alcool et cancer",
                     "slug": "25941_alcool-et-cancer"
-                }                
+                }
             ]
 
         },
@@ -420,7 +420,35 @@
             "title": "PRÉVENTION ET DÉPISTAGE",
             "overview": "Tabac et cancer",
             "color": "#F74D6D",
-            "icon": "fas fa-smoking-ban"         
+            "icon": "fas fa-smoking-ban"
+        },
+        {
+            "slug": "hopitaux",
+            "title": "TOUS LES HOPITAUX",
+            "overview": "Liste des hopitaux",
+            "color": "#F74D6D",
+            "icon": "fas fa-hospital",
+            "list": [{
+                    "title": "Tiaret hopital",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5e/41439-tiaret-lycce-ibn-rostom-et-l-hopital.jpg",
+                    "slug": "1_tiaret_hopital"
+                }
+
+            ],
+            "serie": [{
+                "overview": "Liste des hopitaux",
+                "slug": "hopitaux"
+            }, {
+                "overview": "Tiaret hopital",
+                "slug": "1_tiaret_hopital"
+            }]
+
+        }, {
+            "slug": "1_tiaret_hopital",
+            "title": "TOUS LES HOPITAUX",
+            "overview": "Tiaret hopital",
+            "color": "#F74D6D",
+            "icon": "fas fa-hospital"
         }
 
     ]

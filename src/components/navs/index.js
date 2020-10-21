@@ -28,7 +28,8 @@ import {
     faProjectDiagram,
     faPrayingHands,
     faSmokingBan,
-    faCommentDots
+    faCommentDots,
+    faHospital,
 } from "@fortawesome/free-solid-svg-icons";
 
 //import {useHistory} from "react-router-dom"
@@ -168,8 +169,16 @@ const informe_items = [
         text="Les témoignages"
         icon={faCommentDots}
         color="#F9496B"
-        link="/articles/26025_devenir-partenaire-de-la-ligue"
+        link="/temoignages"
+    />,
+    
+    <IconsBox
+        text="Les hopitaux"
+        icon={faHospital}
+        color="#F9496B"
+        link="/articles/hopitaux"
     />
+   
 ];
 export const TopNav = () => {
     const [opendropTrouve, setOpenDropTrouve] = useState(false);

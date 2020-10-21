@@ -30,6 +30,7 @@ function TemoignagesGrids() {
                 onClick={() => {
                     history.push(`/temoignages/${temoignages[0].id}`);
                 }}
+                animation={{ type: "zoomIn", duration: 1000 }}
             >
                 <Box
                     pad={{ left: "1em", right: "1em" }}
@@ -48,6 +49,7 @@ function TemoignagesGrids() {
                 background={{ color: "#F44D6C" }}
                 gridArea="temoigne"
                 margin={{ left: "1em", right: "2em" }}
+                animation={{ type: "zoomIn", duration: 1000 }}
             >
                 <Heading
                     className="article-sub-title"
@@ -77,6 +79,7 @@ function TemoignagesGrids() {
                 onClick={() => {
                     history.push(`/temoignages/${temoignages[1].id}`);
                 }}
+                animation={{ type: "zoomIn", duration: 1000 }}
             >
                 <FontAwesomeIcon icon={faComment} size="5x" color="#F44D6C" />
 
@@ -99,6 +102,7 @@ function TemoignagesGrids() {
                 onClick={() => {
                     history.push(`/temoignages/${temoignages[2].id}`);
                 }}
+                animation={{ type: "zoomIn", duration: 1000 }}
             >
                 <FontAwesomeIcon icon={faComment} size="5x" color="#F44D6C" />
                 <Heading
@@ -121,6 +125,7 @@ function TemoignagesGrids() {
                 onClick={() => {
                     history.push(`/temoignages/${temoignages[3].id}`);
                 }}
+                animation={{ type: "zoomIn", duration: 1000 }}
             >
                 <FontAwesomeIcon icon={faComment} size="5x" color="#F44D6C" />
                 <Heading
@@ -144,6 +149,7 @@ function TemoignagesGrids() {
                 onClick={() => {
                     history.push(`/temoignages/${temoignages[5].id}`);
                 }}
+                animation={{ type: "zoomIn", duration: 1000 }}
             >
                 <FontAwesomeIcon icon={faComment} size="5x" color="#F44D6C" />
                 <Heading
@@ -167,6 +173,7 @@ function TemoignagesGrids() {
                 onClick={() => {
                     history.push(`/temoignages/${temoignages[4].id}`);
                 }}
+                animation={{ type: "zoomIn", duration: 1000 }}
             >
                 <Box
                     pad={{ left: "1em", right: "1em" }}

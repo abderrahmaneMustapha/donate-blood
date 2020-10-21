@@ -216,6 +216,9 @@ export const TopNav = () => {
                                 <strong>Je Donne</strong>
                             </Text>
                         }
+                        onClick={event=>{
+                            history.push("/faire-un-don")
+                        }}
                     />
 
                     <Button

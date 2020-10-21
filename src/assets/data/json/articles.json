@@ -321,31 +321,106 @@
         },
         {
             "slug": "25638_la-prevention-des-cancers",
-            "title": "TOUS LES CANCERS",
-            "overview": "Cancer du côlon et du rectum",
+            "title": "PRÉVENTION ET DÉPISTAGE",
+            "overview": "La prévention des cancers",
             "color": "#F74D6D",
-            "icon": "fas fa-pills",
+            "icon": "fas fa-praying-hands",
             "serie": [{
-                    "overview": "Liste des types de cancers",
-                    "slug": "26123_liste-des-types-de-cancers"
+                    "overview": "La prévention des cancers",
+                    "slug": "25638_la-prevention-des-cancers"
                 }, {
-                    "overview": "Cancer du poumon",
-                    "slug": "54_cancer-du-poumon"
+                    "overview": "Facteurs d'exposition au risque d'un cancer",
+                    "slug": "25939_facteurs-dexposition-au-risque-dun-cancer"
                 },
                 {
-                    "overview": "Cancer du sein",
-                    "slug": "26094_cancer-du-sein"
+                    "overview": "Tabac et cancer",
+                    "slug": "25940_tabac-et-cancer"
                 },
                 {
-                    "overview": "Cancer de la prostate",
-                    "slug": "26095_cancer-de-la-prostate"
-                },
-                {
-                    "overview": "Cancer du côlon et du rectum",
-                    "slug": "26096_cancer-du-colon-et-du-rectum"
-                }
+                    "overview": "Alcool et cancer",
+                    "slug": "25941_alcool-et-cancer"
+                }                
             ]
 
+        },
+        {
+            "slug": "25939_facteurs-dexposition-au-risque-dun-cancer",
+            "title": "PRÉVENTION ET DÉPISTAGE",
+            "overview": "Facteurs d'exposition au risque d'un cancer",
+            "color": "#F74D6D",
+            "icon": "fas fa-praying-hands",
+            "serie": [{
+                    "overview": "La prévention des cancers",
+                    "slug": "25638_la-prevention-des-cancers"
+                }, {
+                    "overview": "Facteurs d'exposition au risque d'un cancer",
+                    "slug": "25939_facteurs-dexposition-au-risque-dun-cancer"
+                },
+                {
+                    "overview": "Tabac et cancer",
+                    "slug": "25940_tabac-et-cancer"
+                },
+                {
+                    "overview": "Alcool et cancer",
+                    "slug": "25941_alcool-et-cancer"
+                }                
+            ]
+
+        },
+        {
+            "slug": "25941_alcool-et-cancer",
+            "title": "PRÉVENTION ET DÉPISTAGE",
+            "overview": "Alcool et cancer",
+            "color": "#F74D6D",
+            "icon": "fas fa-praying-hands",
+            "serie": [{
+                    "overview": "La prévention des cancers",
+                    "slug": "25638_la-prevention-des-cancers"
+                }, {
+                    "overview": "Facteurs d'exposition au risque d'un cancer",
+                    "slug": "25939_facteurs-dexposition-au-risque-dun-cancer"
+                },
+                {
+                    "overview": "Tabac et cancer",
+                    "slug": "25940_tabac-et-cancer"
+                },
+                {
+                    "overview": "Alcool et cancer",
+                    "slug": "25941_alcool-et-cancer"
+                }                
+            ]
+
+        },
+        {
+            "slug": "25940_tabac-et-cancer",
+            "title": "PRÉVENTION ET DÉPISTAGE",
+            "overview": "Tabac et cancer",
+            "color": "#F74D6D",
+            "icon": "fas fa-praying-hands",
+            "serie": [{
+                    "overview": "La prévention des cancers",
+                    "slug": "25638_la-prevention-des-cancers"
+                }, {
+                    "overview": "Facteurs d'exposition au risque d'un cancer",
+                    "slug": "25939_facteurs-dexposition-au-risque-dun-cancer"
+                },
+                {
+                    "overview": "Tabac et cancer",
+                    "slug": "25940_tabac-et-cancer"
+                },
+                {
+                    "overview": "Alcool et cancer",
+                    "slug": "25941_alcool-et-cancer"
+                }                
+            ]
+
+        },
+        {
+            "slug": "25940_tabac-et-cancer",
+            "title": "PRÉVENTION ET DÉPISTAGE",
+            "overview": "Tabac et cancer",
+            "color": "#F74D6D",
+            "icon": "fas fa-smoking-ban"         
         }
 
     ]

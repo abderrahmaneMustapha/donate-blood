@@ -154,14 +154,14 @@ const informe_items = [
         text="Prévention et dépistage"
         icon={faPrayingHands}
         color="#F9496B"
-        link="/articles/26025_devenir-partenaire-de-la-ligue"
+        link="/articles/25638_la-prevention-des-cancers"
     />,
 
     <IconsBox
         text="Tabac et cancer"
         icon={faSmokingBan}
         color="#F9496B"
-        link="/articles/26025_devenir-partenaire-de-la-ligue"
+        link="/articles/25940_tabac-et-cancer"
     />,
 
     <IconsBox

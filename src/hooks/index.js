@@ -24,3 +24,25 @@ export const getArticlesBySlug = (articles, slug) => {
 
     return { result: result, text: text_md };
 };
+
+export  function getTemoignageById(tem,id){
+    let result = {}
+    let text_md = "";
+    tem.temoignages.forEach((element) => {
+        
+        if (element.id === id) {
+            result = element;
+        }
+    });
+    
+
+    try {
+        const text_file_path = require(`../assets/data/md/${result.title}.md`);
+        text_md = text_file_path ? fetchdata(text_file_path) : undefined;
+    } catch (err) {
+        text_md = ""
+        console.log(err);
+    }
+
+    return { result: result, text: text_md };
+}

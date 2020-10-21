@@ -17,9 +17,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.markdown{
+  min-width: 100%;
+}
 .markdown *{
   margin-right:0;
   min-width: 100%;
+  
 }
 .article-sub-title{
   font-family: 'Lobster', serif;

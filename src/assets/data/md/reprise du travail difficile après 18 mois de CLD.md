@@ -1,0 +1,5 @@
+Après une double chirurgie et une chimiothérapie, je suis enfin en rémission complète, j'ai gagné la bataille contre le Cancer de l'ovaire.
+Mais pour la reprise du travail c'est une catastrophe!
+Je suis dans la fonction publique hospitalière, je vous passe les longues démarches administratives et les 3 expertises pour reprendre en temps partiel thérapeutique. C'est la réaction de l'équipe qui m'a fait beaucoup de peine, me reprochant d'être inutile, trop lente, me conseillant de me mettre en invalidité, en allant se plaindre à la cadre, en refusant de répondre à mes questions, me disant d'aller lire sur l'ordinateur les dossiers etc...,Très décue par ce manque d'empathie,je déprime de plus en plus et je suis angoissée à l'idée d'aller travailler.
+J'ai 55ans Infirmière en catégorie B, je suis à 2 ans de la retraite, je souhaite obtenir un poste à 80% de droit, j'ai obtenu une RQTH mais il n'y a pas de poste aménagé dans l'hopital ou je travaille.
+Après le combat contre la maladie je n'ai plus d'énergie pour faire valoir mes droits.J'espère que le plan cancer 2014-2019 permettra d'améliorer le retour à l'emploi.

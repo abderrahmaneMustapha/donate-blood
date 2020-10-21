@@ -32,7 +32,7 @@ import {
     faHospital,
 } from "@fortawesome/free-solid-svg-icons";
 
-//import {useHistory} from "react-router-dom"
+import {useHistory} from "react-router-dom"
 
 const gravatarLink =
     "//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80";
@@ -184,6 +184,7 @@ export const TopNav = () => {
     const [opendropTrouve, setOpenDropTrouve] = useState(false);
     const [opendropSout, setOpenDropSout] = useState(false);
     const [opendropInfo, setOpenDropInfo] = useState(false);
+    let history = useHistory()
     return (
         <Header
             background="white"
@@ -214,6 +215,9 @@ export const TopNav = () => {
                     />
 
                     <Button
+                    onClick={()=>{
+                        history.push("/connect")
+                    }}
                         label={
                             <Text>
                                 <strong>Se Connecter</strong>

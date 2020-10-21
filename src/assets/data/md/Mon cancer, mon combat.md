@@ -1,0 +1,4 @@
+Bonjour à tous,
+ 
+Novembre 2013, une grosseur au sein droit mais aucun symptôme. 3 médecins généralistes qui disaient que c'était anodin et une prise de sang nickel!!!....sauf que la biopsie n'était pas nickel....Carcinome canalaire infiltrant (agressivité 3/4) et sur expression HER-2+++. A l'annonce je me suis effondrée. Soignée sur Lyon, j'ai mieux supportée les traitements que ce que pensaient les médecins. En 3 cures il n'y avait plus rien (mais j'ai fais 3 cures de plus en prévention), chirugie et rayons n'ont posé aucun soucis. J'ai perdu mes cheveux mais ça me faisais rien, la perruque j'ai jamais pu m'y faire, c'était pas moi. Je me suis jamais empêchée de vivre, le positif c'est que ça m'a fait arrêter de fumer!!!!
+Voilà un résumé de l'année 2014. Courage à tous. Lauriane

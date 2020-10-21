@@ -1,15 +1,16 @@
 import React from "react";
 import { WebFooter } from "../../components/footer/index";
 import { TopNav } from "../../components/navs/index";
-import { Main, Grid, Card, Text, Box, Heading } from "grommet";
+import { Main, Grid, Card, Text, Box, Heading, Markdown } from "grommet";
 import TemoignagesJson from "../../assets/data/json/temoignages.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment } from "@fortawesome/free-solid-svg-icons";
-import {useHistory} from "react-router-dom"
+import { useHistory, useParams } from "react-router-dom";
+import { getTemoignageById } from "../../hooks/index";
 // 6
 function TemoignagesGrids() {
     const temoignages = TemoignagesJson.temoignages;
-    let history  = useHistory()
+    let history = useHistory();
     return (
         <Grid
             rows={["medium", "medium", "medium"]}
@@ -26,8 +27,8 @@ function TemoignagesGrids() {
                 background={{ image: `url(${temoignages[0].image})` }}
                 gridArea="big_one"
                 margin={{ left: "1em", right: "1em" }}
-                onClick={()=>{
-                    history.push(`/temoignages/${temoignages[0].id}`)
+                onClick={() => {
+                    history.push(`/temoignages/${temoignages[0].id}`);
                 }}
             >
                 <Box
@@ -47,7 +48,6 @@ function TemoignagesGrids() {
                 background={{ color: "#F44D6C" }}
                 gridArea="temoigne"
                 margin={{ left: "1em", right: "2em" }}
-                
             >
                 <Heading
                     className="article-sub-title"
@@ -74,8 +74,8 @@ function TemoignagesGrids() {
                 direction="column"
                 align="center"
                 pad={{ top: "3em" }}
-                onClick={()=>{
-                    history.push(`/temoignages/${temoignages[1].id}`)
+                onClick={() => {
+                    history.push(`/temoignages/${temoignages[1].id}`);
                 }}
             >
                 <FontAwesomeIcon icon={faComment} size="5x" color="#F44D6C" />
@@ -96,8 +96,8 @@ function TemoignagesGrids() {
                 direction="column"
                 align="center"
                 pad={{ top: "3em" }}
-                onClick={()=>{
-                    history.push(`/temoignages/${temoignages[2].id}`)
+                onClick={() => {
+                    history.push(`/temoignages/${temoignages[2].id}`);
                 }}
             >
                 <FontAwesomeIcon icon={faComment} size="5x" color="#F44D6C" />
@@ -118,8 +118,8 @@ function TemoignagesGrids() {
                 direction="column"
                 align="center"
                 pad={{ top: "3em" }}
-                onClick={()=>{
-                    history.push(`/temoignages/${temoignages[3].id}`)
+                onClick={() => {
+                    history.push(`/temoignages/${temoignages[3].id}`);
                 }}
             >
                 <FontAwesomeIcon icon={faComment} size="5x" color="#F44D6C" />
@@ -141,8 +141,8 @@ function TemoignagesGrids() {
                 direction="column"
                 align="center"
                 pad={{ top: "3em" }}
-                onClick={()=>{
-                    history.push(`/temoignages/${temoignages[5].id}`)
+                onClick={() => {
+                    history.push(`/temoignages/${temoignages[5].id}`);
                 }}
             >
                 <FontAwesomeIcon icon={faComment} size="5x" color="#F44D6C" />
@@ -163,9 +163,9 @@ function TemoignagesGrids() {
                 margin={{ right: "2em" }}
                 direction="column"
                 align="center"
-                style={{position:"relative"}}
-                onClick={()=>{
-                    history.push(`/temoignages/${temoignages[4].id}`)
+                style={{ position: "relative" }}
+                onClick={() => {
+                    history.push(`/temoignages/${temoignages[4].id}`);
                 }}
             >
                 <Box
@@ -174,7 +174,7 @@ function TemoignagesGrids() {
                     style={{
                         position: "absolute",
                         top: "auto",
-                        bottom: "0"
+                        bottom: "0",
                     }}
                 >
                     <Text size="1.875rem"> {temoignages[4].title}</Text>
@@ -185,7 +185,7 @@ function TemoignagesGrids() {
 }
 function MainTemoignages() {
     return (
-        <Main pad={{bottom:"2em"}} background={{ color: "#E6E6E6" }}>
+        <Main pad={{ bottom: "2em" }} background={{ color: "#E6E6E6" }}>
             <TemoignagesGrids />
         </Main>
     );
@@ -195,6 +195,46 @@ export default function Temoignages() {
         <>
             <TopNav />
             <MainTemoignages />
+            <WebFooter />
+        </>
+    );
+}
+
+export function OneTemoignagesPage() {
+    let [text, settext] = React.useState("");
+    const params = useParams();
+    const tem = getTemoignageById(TemoignagesJson, parseInt(params.id));
+    tem.text.then((data) => {
+        settext(data);
+    });
+
+    return (
+        <>
+            <TopNav />
+            <Main background={{ color: "#E6E6E6" }} pad="large">
+                <Box
+                    fill="horizontal"
+                    pad="medium"
+                    background={{ color: "white" }}
+                >
+                    <Heading
+                        level="2"
+                        textAlign="center"
+                        width="100%"
+                        size="medium"
+                        margin={{ bottom: "2em" }}
+                    >
+                        {tem.result.title}
+                    </Heading>
+
+                    <hr width="80%"></hr>
+                    {text ? (
+                        <Markdown className="markdown">{text}</Markdown>
+                    ) : (
+                        <div> Loading ....</div>
+                    )}
+                </Box>
+            </Main>
             <WebFooter />
         </>
     );

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { TopNav } from "../../components/navs/index";
-import {WebFooter} from "../../components/footer/index"
+import { WebFooter } from "../../components/footer/index";
 
 import {
     Main as MainSection,
@@ -16,13 +16,8 @@ import {
     ResponsiveContext,
     Layer,
 } from "grommet";
-import {
-    Next,
-    Search,
-    Chat,
-    Help,
-} from "grommet-icons";
-import {useHistory} from "react-router-dom"
+import { Next, Search, Chat, Help } from "grommet-icons";
+import { useHistory } from "react-router-dom";
 import bgOne from "../../assets/images/bg-1.png";
 import bgTwo from "../../assets/images/bg-2.jpg";
 import ALgeriaPhoto from "../../assets/images/algeria.png";
@@ -30,7 +25,7 @@ import handClosedUp from "../../assets/images/picto1.png";
 import twoHands from "../../assets/images/picto2.png";
 
 const NewsLetterForm = () => (
-    <Form margin={{ top: "0.2em", bottom: "2em" }}>
+    <Form  id="news-letter-form" margin={{ top: "0.2em", bottom: "2em" }}>
         <Box direction="row" gap="medium">
             <FormField htmlFor="text-input">
                 <TextInput
@@ -202,7 +197,7 @@ const SecendHomeSection = () => {
 };
 
 const HomeSideBar = () => {
-    let history = useHistory()
+    let history = useHistory();
     return (
         <Layer
             full="vertical"
@@ -228,9 +223,18 @@ const HomeSideBar = () => {
                 </Text>
 
                 <Box margin={{ top: "1em", bottom: "5em" }}>
-                    <Button icon={<Search />} label="Chercher" onClick={()=>{
-                        history.push("/chercher")
-                    }} />
+                    <Button
+                        secondary
+                        icon={<Search />}
+                        label={ 
+                            <Text>
+                                <strong>Chercher</strong>
+                            </Text>
+                        }
+                        onClick={() => {
+                            history.push("/chercher");
+                        }}
+                    />
                 </Box>
 
                 <hr width="80%"></hr>
@@ -268,7 +272,6 @@ const HomePage = () => {
         </MainSection>
     );
 };
-
 
 export const Main = () => {
     return (

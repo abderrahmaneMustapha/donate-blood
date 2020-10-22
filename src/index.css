@@ -25,6 +25,18 @@ code {
   min-width: 100%;
   
 }
+
+.markdown h2{
+  font-family: 'Lobster'!important;
+}
+.markdown h4{
+  color: #02539E;
+}
 .article-sub-title{
   font-family: 'Lobster', serif;
+}
+
+
+#news-letter-form input::placeholder, #news-letter-form input{
+ color: white;
 }

@@ -9,12 +9,76 @@ import Search from "./pages/search/index"
 
 import * as serviceWorker from "./serviceWorker";
 import { Grommet } from "grommet";
-import { grommet } from "grommet/themes";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+const kindButtonTheme = {
+    global: {
+      colors: {
+        brand: '#FB6D2E',
+        'brand-contrast': '#FB6929',
+        active: '#FB6929',
+      },
+      font: { family: 'Arial' },
+    },
+    button: {
+      default: {
+        color: 'text',
+        border: "#FB6D2E",
+        padding: {
+          horizontal: '12px',
+          vertical: '8px',
+        },
+      },
+      primary: {
 
+        background: { color: 'brand' },
+        border: { color: 'brand', width: '1px' },
+        color: "white",
+        font: { weight: 'bold' },
+        padding: {
+          horizontal: '12px',
+          vertical: '8px',
+        },
+      },
+      secondary: {
+        background : {color : "white"},
+        border: { color: 'brand', width: '1px' },
+        color: 'brand',
+        padding: {
+          horizontal: '8px',
+          vertical: '4px',
+        },
+      },
+      active: {
+        background: { color: 'brand-contrast' },
+        color: 'text',
+        secondary: {
+          background: 'none',
+          border: {
+            color: 'brand-contrast',
+          },
+        },
+      },
+      disabled: {
+        opacity: 0.3,
+        secondary: {
+          border: { color: 'text-weak' },
+        },
+      },
+      hover: {
+        background: { color: 'white' },
+        border: { color: 'brand', width: '1px' },
+        color : "brand",
+        secondary: {
+          border: { color: 'active' },
+          background: { color: 'brand' },
+          color: "white"
+        },
+      },
+    },
+  };
 ReactDOM.render(
     <React.StrictMode>
-        <Grommet theme={grommet}>
+        <Grommet theme={ kindButtonTheme}>
             <Router>
                 <Route exact path="/" component={Main} />
                 <Route exact path="/articles/:slug" component={Article} />

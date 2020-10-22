@@ -210,18 +210,20 @@ export const TopNav = () => {
                     <PhoneBox />
                     <Avatar src="https://www.ligue-cancer.net/sites/all/themes/ligue/images/header/log-don-de-confiance.png" />
                     <Button
+                        primary
                         icon={<FontAwesomeIcon icon={faHandHoldingHeart} />}
                         label={
                             <Text>
                                 <strong>Je Donne</strong>
                             </Text>
                         }
-                        onClick={event=>{
-                            history.push("/faire-un-don")
+                        onClick={(event) => {
+                            history.push("/faire-un-don");
                         }}
                     />
 
                     <Button
+                        secondary
                         onClick={() => {
                             history.push("/connect");
                         }}

@@ -1,10 +1,10 @@
 
 ## Au niveau national
 
-**00 00 94 99 00**
+**00 00 00 00 00**
 
 La Ligue Nationale contre le cancer met à votre disposition un numéro de téléphone gratuit,
-le 00 00 94 99 00 (du lundi au vendredi de 9 h à 19 h).En tapant 1 vous pouvez accéder à un service d’ écoute et de soutien,
+le 00 00 00 00 00 (du lundi au vendredi de 9 h à 19 h).En tapant 1 vous pouvez accéder à un service d’ écoute et de soutien,
 anonyme et confidentiel,
 assuré par des psychologues.Ce service s’ adresse à toute personne concernée par la maladie,
 quel que soit le moment(en attente de résultats, suite à une annonce, au cours de traitements, l’ après cancer…).Tous les sujets peuvent être abordés: doutes,

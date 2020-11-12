@@ -1,1 +1,1 @@
-![cancer](https://www.ligue-cancer.net/sites/default/files/cancer.png)
+![cancer](/frontend/src/assets/images/algeria.png)

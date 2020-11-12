@@ -1,6 +1,5 @@
 import React from "react";
 import {
-    Form,
     FormField,
     TextInput,
     Box,
@@ -9,12 +8,67 @@ import {
     Heading,
     Grid,
     Text,
+    Form,
 } from "grommet";
 import { TopNav } from "../../components/navs/index";
 import { WebFooter } from "../../components/footer/index";
-import { PaymentForm } from "../../components/forms/index"
+import { PaymentForm } from "../../components/forms/index";
+import { SignupSchema } from "../../components/forms/schema";
+import { CREATE_USER } from "../../services/api/users/index";
+import { useHistory } from "react-router-dom";
+import { useMutation } from "@apollo/client";
+import { useFormik } from "formik";
+
 export function Connect() {
-    const [value, setValue] = React.useState();
+    let history = useHistory();
+    const [createUser, { data }] = useMutation(CREATE_USER);
+
+    const formik = useFormik({
+        initialValues: {
+            name: "",
+            prenom: "",
+            email: "",
+            password1: "",
+            password2: "",
+            groupage : "",
+            phone : "",
+            gender : "",
+            city  : ""
+        },
+        validationSchema: SignupSchema,
+        onSubmit: async (values) => {
+            console.log(values);
+            await new Promise(
+                console.log(
+                    createUser({
+                        variables: {
+                            firstName: values.name,
+                            lastName: values.prenom,
+                            email: values.email,
+                            password1: values.password1,
+                            password2: values.password2,
+                            groupage : values.groupage,
+                            phone : values.phone,
+                            gender : values.gender,
+                            city : values.city
+                        },
+                    }).then((data) => {
+                        if (data.data.register.success) {
+                            localStorage.setItem(
+                                "jwt",
+                                data.data.register.token
+                            );
+
+                            history.push(`/profile/me`);
+                        }
+                    })
+                )
+            );
+        },
+    });
+
+    let errors = data ? data.register.errors : undefined;
+
     return (
         <>
             <TopNav />
@@ -38,40 +92,169 @@ export function Connect() {
                     >
                         Connect
                     </Heading>
-                    <Form
-                        value={value}
-                        onChange={(nextValue) => setValue(nextValue)}
-                        onSubmit={({ value }) => {}}
-                    >
-                        <FormField name="nom" htmlfor="nom" label="Nom">
-                            <TextInput id="nom" name="nom" />
+                    <Form onSubmit={formik.handleSubmit}>
+                        <FormField htmlfor="name" label="Nom">
+                            <TextInput
+                                id="name"
+                                name="name"
+                                onChange={(event) => {
+                                    formik.setFieldValue(
+                                        "name",
+                                        event.target.value
+                                    );
+                                }}
+                            />
                         </FormField>
+                        {formik.errors.name && formik.touched.name ? (
+                            <div>{formik.errors.name}</div>
+                        ) : null}
+
+                        <FormField htmlfor="prenom" label="Prenom">
+                            <TextInput
+                                id="prenom"
+                                name="prenom"
+                                onChange={(event) => {
+                                    formik.setFieldValue(
+                                        "prenom",
+                                        event.target.value
+                                    );
+                                }}
+                            />
+                        </FormField>
+
+                        {formik.errors.prenom && formik.touched.prenom ? (
+                            <div>{formik.errors.prenom}</div>
+                        ) : null}
+
+
+                        <FormField htmlfor="city" label="Wilaya">
+                            <TextInput
+                                id="city"
+                                name="city"
+                                onChange={(event) => {
+                                    formik.setFieldValue("city", event.target.value);
+                                }}
+                            />
+                        </FormField>
+                        {formik.errors.city && formik.touched.city ? (
+                            <div>{formik.errors.city}</div>
+                        ) : null}
+
+
+                        <FormField htmlfor="email" label="Email">
+                            <TextInput
+                            type="email"
+                                id="email"
+                                name="email"
+                                onChange={(event) => {
+                                    formik.setFieldValue("email", event.target.value);
+                                }}
+                            />
+                        </FormField>
+
+                        {formik.errors.email && formik.touched.email ? (
+                            <div>{formik.errors.email}</div>
+                        ) : null}
+
+                        <FormField htmlfor="password1" label="Password">
+                            <TextInput
+                                type="password"
+                                id="password1"
+                                name="password1"
+                                onChange={(event) => {
+                                    formik.setFieldValue(
+                                        "password1",
+                                        event.target.value
+                                    );
+                                }}
+                            />
+                        </FormField>
+
+                        {formik.errors.password1 && formik.touched.password1 ? (
+                            <div>{formik.errors.password1}</div>
+                        ) : null}
+
                         <FormField
-                            name="prenome"
-                            htmlfor="prenome"
-                            label="Prenom"
+                            htmlfor="password2"
+                            label="Password confirmation"
                         >
-                            <TextInput id="prenome" name="prenome" />
+                            <TextInput
+                                type="password"
+                                id="password2"
+                                name="password2"
+                                onChange={(event) => {
+                                    formik.setFieldValue(
+                                        "password2",
+                                        event.target.value
+                                    );
+                                }}
+                            />
                         </FormField>
-                        <FormField
-                            name="wilaya"
-                            htmlfor="wilaya"
-                            label="Wilaya"
-                        >
-                            <TextInput id="wilaya" name="wilaya" />
+
+                        {formik.errors.password2 && formik.touched.password2 ? (
+                            <div>{formik.errors.password2}</div>
+                        ) : null}
+
+                        <FormField htmlfor="groupage" label="Group">
+                            <TextInput
+                                id="groupage"
+                                name="groupage"
+                                onChange={(event) => {
+                                    formik.setFieldValue(
+                                        "groupage",
+                                        event.target.value
+                                    );
+                                }}
+                            />
                         </FormField>
-                        <FormField name="group" htmlfor="group" label="Group">
-                            <TextInput id="group" name="group" />
+                        {formik.errors.groupage && formik.touched.groupage ? (
+                            <div>{formik.errors.groupage}</div>
+                        ) : null}
+
+                        <FormField htmlfor="phone" label="Numero telephone">
+                            <TextInput
+                                id="phone"
+                                name="phone"
+                                onChange={(event) => {
+                                    formik.setFieldValue(
+                                        "phone",
+                                        event.target.value
+                                    );
+                                }}
+                            />
                         </FormField>
-                        <FormField
-                            name="numero"
-                            htmlfor="numero"
-                            label="Numero telephone"
-                        >
-                            <TextInput id="numero" name="numero" />
+                        {formik.errors.phone && formik.touched.phone ? (
+                            <div>{formik.errors.phone}</div>
+                        ) : null}
+
+                        <FormField htmlfor="gender" label="Sex">
+                            <TextInput
+                                id="gender"
+                                name="gender"
+                                onChange={(event) => {
+                                    formik.setFieldValue(
+                                        "gender",
+                                        event.target.value
+                                    );
+                                }}
+                            />
                         </FormField>
+
+                        {formik.errors.gender && formik.touched.gender ? (
+                            <div>{formik.errors.gender}</div>
+                        ) : null}
+                       
+                        
                         <Box direction="row" gap="medium">
-                            <Button type="submit" primary label="Submit" />
+                            <Button
+                                primary
+                                type="submit"
+                                label="Submit"
+                                onSubmit={formik.handleSubmit}
+                                onClick={
+                                    formik.handleSubmit
+                            }
+                            />
                         </Box>
                     </Form>
                 </Box>
@@ -101,30 +284,61 @@ function MonDon() {
                 MON DON
             </Heading>
 
-            <Box background={{ color: "#F6DBEF" }} pad={{vertical:"2em", horizontal:"2em"}}  width="90%" margin="small">
-                <Text color="#9F216B"> <strong>Je donne une fois</strong></Text>
-                <Box direction="row" margin={{top:"2em"}} justify="around" gap="small">
+            <Box
+                background={{ color: "#F6DBEF" }}
+                pad={{ vertical: "2em", horizontal: "2em" }}
+                width="90%"
+                margin="small"
+            >
+                <Text color="#9F216B">
+                    {" "}
+                    <strong>Je donne une fois</strong>
+                </Text>
+                <Box
+                    direction="row"
+                    margin={{ top: "2em" }}
+                    justify="around"
+                    gap="small"
+                >
                     <FormField width="90%">
                         <TextInput></TextInput>
                     </FormField>
-                    <Text color="#9F216B" size="1.6em"> <strong>$</strong> </Text>
+                    <Text color="#9F216B" size="1.6em">
+                        {" "}
+                        <strong>$</strong>{" "}
+                    </Text>
                 </Box>
             </Box>
 
-            <Box background={{ color: "#BB2B80" }} pad={{vertical:"2em", horizontal:"2em"}}  width="90%" margin="small">
-                <Text color="white"> <strong>Je donne chaque mois</strong></Text>
-                <Box direction="row" margin={{top:"2em"}} justify="around" gap="small">
+            <Box
+                background={{ color: "#BB2B80" }}
+                pad={{ vertical: "2em", horizontal: "2em" }}
+                width="90%"
+                margin="small"
+            >
+                <Text color="white">
+                    {" "}
+                    <strong>Je donne chaque mois</strong>
+                </Text>
+                <Box
+                    direction="row"
+                    margin={{ top: "2em" }}
+                    justify="around"
+                    gap="small"
+                >
                     <FormField width="90%">
                         <TextInput></TextInput>
                     </FormField>
-                    <Text color="white" size="1.6em"> <strong>$</strong> </Text>
+                    <Text color="white" size="1.6em">
+                        {" "}
+                        <strong>$</strong>{" "}
+                    </Text>
                 </Box>
             </Box>
         </Box>
     );
 }
 function Coordonnes() {
-    const [value, setValue] = React.useState();
     return (
         <Box
             background="white"
@@ -140,11 +354,7 @@ function Coordonnes() {
             >
                 MES COORDONNÉES
             </Heading>
-            <Form
-                value={value}
-                onChange={(nextValue) => setValue(nextValue)}
-                onSubmit={({ value }) => {}}
-            >
+            <Form>
                 <FormField name="nom" htmlfor="nom" label="Nom">
                     <TextInput id="nom" name="nom" />
                 </FormField>
@@ -179,10 +389,9 @@ function Reglement() {
                 margin={{ bottom: "2em" }}
             >
                 MON RÈGLEMENT
-              
             </Heading>
 
-            <PaymentForm  />
+            <PaymentForm />
         </Box>
     );
 }

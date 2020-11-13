@@ -25,20 +25,22 @@ export const SignupSchema = Yup.object().shape({
         .required("Required"),
 
     groupage: Yup.string()
+    .min(1, "Too Short!")
         .max(3, "Too Long!")
         .required("Required"),
 
     phone: Yup.string()
-        
+    .min(1, "Too Short!")
         .max(100, "Too Long!")
         .required("Required"),
 
     gender: Yup.string()
-        .max(10, "Too Long!")
+    .min(1, "Too Short!")
+        .max(1, "Too Long please choose F or M!")
         .required("Required"),
 
     city: Yup.string()
-        .min(8, "Too Short!")
+        .min(2, "Too Short!")
         .max(100, "Too Long!")
         .required("Required"),
 });

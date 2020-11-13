@@ -37,13 +37,13 @@ export function Connect() {
         },
         validationSchema: SignupSchema,
         onSubmit: async (values) => {
-            console.log(values);
+        
             await new Promise(
                 console.log(
                     createUser({
                         variables: {
-                            firstName: values.name,
-                            lastName: values.prenom,
+                            first_name: values.name,
+                            last_name: values.prenom,
                             email: values.email,
                             password1: values.password1,
                             password2: values.password2,
@@ -59,7 +59,7 @@ export function Connect() {
                                 data.data.register.token
                             );
 
-                            history.push(`/profile/me`);
+                            history.push(`/`);
                         }
                     })
                 )
@@ -68,7 +68,7 @@ export function Connect() {
     });
 
     let errors = data ? data.register.errors : undefined;
-
+    console.log(errors)
     return (
         <>
             <TopNav />
@@ -251,9 +251,7 @@ export function Connect() {
                                 type="submit"
                                 label="Submit"
                                 onSubmit={formik.handleSubmit}
-                                onClick={
-                                    formik.handleSubmit
-                            }
+                             
                             />
                         </Box>
                     </Form>

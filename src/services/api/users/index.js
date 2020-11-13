@@ -43,6 +43,10 @@ export const CREATE_USER = gql`
             email: $email
             password1: $password1
             password2: $password2
+            groupage: $groupage
+            phone: $phone
+            gender: $gender
+            city: $city
         ) {
             success
             errors

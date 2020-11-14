@@ -68,7 +68,24 @@ export function Connect() {
     });
 
     let errors = data ? data.register.errors : undefined;
-    console.log(errors)
+    
+
+     const addErrors = ()=>{
+        let result = []
+        
+        Object.entries(errors).forEach(([k,value])=> {
+            value.forEach(
+                element=>{                
+                    result.push(element.message)
+                }
+            )
+        })
+        
+        
+
+        return result
+     }
+
     return (
         <>
             <TopNav />
@@ -92,6 +109,14 @@ export function Connect() {
                     >
                         Connect
                     </Heading>
+
+                    <div >
+                    <ul>
+                        {errors ? addErrors().forEach(element=>(
+                            <li><Text>{element}</Text></li>
+                        )) : undefined} 
+                    </ul>
+                    </div>
                     <Form onSubmit={formik.handleSubmit}>
                         <FormField htmlfor="name" label="Nom">
                             <TextInput
